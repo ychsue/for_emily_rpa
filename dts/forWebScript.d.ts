@@ -1,11 +1,11 @@
 
-interface Node {
-    innerText: string;
-    value: string; // For <input>
-    click: () => {};
-}
+// interface Node {
+//     innerText: string;
+//     value: string; // For <input>
+//     click: () => {};
+// }
 
-export var nodes: Node[];
+export var nodes: Element[];
 
 /**
  * 讀檔
@@ -14,6 +14,7 @@ export var nodes: Node[];
  */
 export function read(filename: string, encoding?: "utf8"): string
 export function write(filename: string, content: string): null
+export function remove(filename: string): null
 
 /**
  * 重複執行此腳本
@@ -26,16 +27,25 @@ export function run(uuid: string): Promise<null>
 export function download(url: string, filename: string): Promise<null>
 
 //#region Mouse
-export function mouseEnter(node: Node): null
-export function mouseMove(node: Node, x: number, y: number): null
-export function mouseLeave(node: Node): null
-export function mouseDown(node: Node, x: number, y: number): null
-export function mouseUp(node: Node, x: number, y: number): null
-export function mouseClick(node: Node): null
-export function mouseDblClick(node: Node): null
-export function mouseContextmenu(node: Node, x: number, y: number): null
+export function mouseEnter(node: Element): null
+export function mouseMove(node: Element, x: number, y: number): null
+export function mouseLeave(node: Element): null
+export function mouseDown(node: Element, x?: number, y?: number): null
+export function mouseUp(node: Element, x?: number, y?: number): null
+export function mouseClick(node: Element): null
+export function mouseDblClick(node: Element): null
+export function mouseContextmenu(node: Element, x: number, y: number): null
+
 // TODO: DA mouse part
+export interface DAMouse {
+    enable: (isEnable: boolean) => Promise<void>;
+    move: (node: Element, offsetX: number, offsetY: number) => Promise<void>;
+    clickLeft: () => Promise<void>;
+    clickRight: () => Promise<void>;
+    // drag: (unknown, unknown) => Promise<void>; // TODO
+}
+export var mouse: DAMouse;
 // https://docs.emily.tips/web-tool
 //#endregion Mouse
 
-export function clearSessionData(): Promise<null>
+export function clearSessionData(): Promise<undefined>
