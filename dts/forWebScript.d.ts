@@ -1,3 +1,5 @@
+// Doc:  https://docs.emily.tips/web-tool
+
 
 // interface Node {
 //     innerText: string;

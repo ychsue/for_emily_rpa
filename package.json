@@ -9,6 +9,7 @@
   "author": "Young-Chung Hsue",
   "license": "ISC",
   "dependencies": {
+    "@types/google-spreadsheet": "^3.3.0",
     "@types/lodash": "^4.14.191",
     "@types/moment": "^2.13.0"
   }
