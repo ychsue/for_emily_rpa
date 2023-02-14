@@ -94,5 +94,8 @@ const { api } = require("../dts/forDA");
     await api.shell.trashItem('/Users/emily/Desktop/input.xlsx')
     // 開啟網頁連結
     await api.shell.openExternal('https://google.com')
+
+    // CaptureToOcr
+    let ocrResult = await api.captureToOcr({ left: 0, top: 0 }, 0, 0, 100, 100, /test/, true);
     //#endregion 實際需要的程式
 })();

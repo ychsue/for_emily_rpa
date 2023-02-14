@@ -26,6 +26,7 @@ export function remove(filename: string): null
 export function repeat(isRepeat: boolean, delay?: number): null
 
 export function run(uuid: string): Promise<null>
+export function sleep(ms: number): Promise<undefined>
 export function download(url: string, filename: string): Promise<null>
 
 //#region Mouse
