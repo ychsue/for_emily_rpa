@@ -22,7 +22,7 @@ export interface WoSAPI {
     webhook: WebHook // TODO
 }
 
-export interface Stat {
+export interface STAT {
     dev: number;
     mode: number;
     nlink: number;
