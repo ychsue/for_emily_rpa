@@ -2,7 +2,8 @@
 /// <reference path="../dts/forWebScript.d.ts" />
 
 const { default: _ } = require("lodash");
-const { download, run, mouseDown, mouseUp, mouse, nodes, write, clearSessionData, repeat } = require("../dts/forWebScript");
+const { mouseDown, mouseUp, mouse, clearSessionData, repeat, download } = require("../dts/common");
+const { nodes, write, run } = require("../dts/forWebScript");
 
 (async () => {
     //#region 要複製的區段
