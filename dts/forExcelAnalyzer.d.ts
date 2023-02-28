@@ -1,4 +1,5 @@
 // Doc:  https://docs.emily.tips/excel2txt
+///<reference path="common.d.ts"/>
 
 /**
  * [eachRow] & 
