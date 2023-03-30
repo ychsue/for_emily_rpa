@@ -1,3 +1,5 @@
+///<reference path="common.d.ts"/>
+
 export interface WoSAPI {
     files: () => Array<string>;
     stat: (filename: string) => STAT;

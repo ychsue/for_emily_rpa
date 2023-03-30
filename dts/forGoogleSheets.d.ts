@@ -1,3 +1,5 @@
+///<reference path="common.d.ts"/>
+
 // Doc:  https://docs.emily.tips/google-sheets
 
 import { GoogleSpreadsheet } from "google-spreadsheet";
@@ -12,7 +14,13 @@ export interface GSRows extends Rows {
 export interface GSAPI {
     addRows: (sheetName: string, rows: GSRows) => Promise<undefined>;
     addSheet: (header: string[], rows: GSRows, sheetName: string) => Promise<undefined>;
-    delRow: (sheetName: string, rowIndex = 0) => Promise<>;
+    /**
+     * 
+     * @param sheetName sheets' name
+     * @param rowIndex default is 0: index of the row you want to delete
+     * @returns a promise
+     */
+    delRow: (sheetName: string, rowIndex?: number) => Promise<null>;
     delSheet: (sheetName: string) => Promise<undefined>;
 
     files: () => string[];

@@ -17,12 +17,12 @@ export interface EWAPI {
 }
 
 export interface EWStyle {
-    alignment: {
+    alignment?: {
         vertical: string;
         horizontal: string;
         wrapText: boolean;
     }
-    font: {
+    font?: {
         name: string;
         sz: number;
         color: {
@@ -33,12 +33,12 @@ export interface EWStyle {
         underline: boolean;
         strike: boolean;
     }
-    fill: {
+    fill?: {
         fgColor: {
             rgb: string;
         }
     }
-    border: {
+    border?: {
         top: BorderStyle,
         bottom: BorderStyle,
         left: BorderStyle,

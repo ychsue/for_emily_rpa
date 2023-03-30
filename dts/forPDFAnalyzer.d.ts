@@ -1,3 +1,5 @@
+///<reference path="common.d.ts"/>
+
 // Doc:  https://docs.emily.tips/pdf2txt
 
 // Learned from https://trungk18.com/experience/how-to-copy-an-object-from-the-chrome-inspector-console-as-code/
