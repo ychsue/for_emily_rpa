@@ -14,3 +14,13 @@ export var input: Array<{ [key: string]: any }>;
  * value: its content 
  */
 export var output: { [key: string]: string };
+
+export interface API {
+    cell: (addr?: "A1"|string) => string|undefined
+    files: ()=>string[]
+    read: (fName: string) => string
+    remove: (fName: string) => undefined
+    write: (fName: string, content: string) => undefined
+}
+
+export var api: API;
