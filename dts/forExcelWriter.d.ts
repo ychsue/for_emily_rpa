@@ -52,3 +52,15 @@ export interface BorderStyle {
 }
 
 export var api: EWAPI;
+
+export var input: {
+    Sheets: {
+        [sheetName: string]: {
+            [cellName: string]: {
+                v: string | number;
+                t: string;
+                w: string;
+            }
+        }
+    }
+}
