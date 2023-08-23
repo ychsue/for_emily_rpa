@@ -5,13 +5,13 @@ export interface EWAPI {
     delSheet: (sheetName: string) => null
     files: () => string[]
     getCell: (sheetName: string, r?: 0 | number, c?: 0 | number) => string | number | null
-    // mergeCells: (name, sr, sc, er, ec) => {… }
+    mergeCells: (name:string, startRow:number, startCol:number, endRow:number, endCol:number) =>null
     // merges: (name) => {… }
     read: (fileName: string, encoding?: 'utf8' | string) => string
     remove: (fileName: string) => null
     setCell: (sheetName: string, r: 0 | number, c: 0 | number, value: string | number, style?: EWStyle) => null
-    // setColWidth: (name, c, w) => {… }
-    // setRowHeight: (name, r, h) => {… }
+    setColWidth: (name:string, c:number, w:number) => null
+    setRowHeight: (name:string, r:number, h:number) => null
     sheetNames: () => string[]
     write: (fileName: string, content: string, a?: string) => null
 }
