@@ -6,7 +6,7 @@ export var folder: string; // The workspace folder
 // setHighlighting
 // learnViewPort
 // ignoreRecord
-export function readText(filename: string): string
+export function readText(filename: string,encoding: [string]): string
 export function writeText(filename: string, context: string): null
 export function remove(filename: string): null
 export function rename(oldName: string, newName: string): null
