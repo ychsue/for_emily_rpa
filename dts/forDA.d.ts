@@ -46,7 +46,7 @@ export interface API {
      * @returns 由 text 與 lines 組成
      */
     captureToOcr: (ref: DAScreenOptions, offsetX: number, offsetY: number, width: number, height: number, searchLine?: RegExp, moveCursor?: boolean) => Promise<CaptureOCR>;
-    // debug: (flag)=>undefined;
+    debug: (flag: boolean)=>undefined;
     // pollAbort: any;
 
     files: () => string[];
@@ -95,13 +95,17 @@ export interface DAMouse {
     clickLeft: () => Promise<undefined>;
     clickRight: () => Promise<undefined>;
     // config
+    doubleClick: () => Promise<undefined>;
     drag: (x: number, y: number) => Promise<undefined>;
+    getPosition: () => Promise<Point>
     move: (x: number, y: number) => Promise<undefined>;
     scrollDown: (n: number) => Promise<undefined>;
     scrollLeft: (n: number) => Promise<undefined>;
     scrollRight: (n: number) => Promise<undefined>;
     scrollUp: (n: number) => Promise<undefined>;
 }
+
+export interface Point {x:number,y:number}
 
 export interface DAShell {
     openExternal: (url: string) => Promise<undefined>;
