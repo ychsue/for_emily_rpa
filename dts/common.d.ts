@@ -57,6 +57,7 @@ export interface CommonAPI {
         readText: () => string;
         writeText: (text: string) => null;
     }
+    fs: typeof import("fs")
 }
 
 export var vue: CommonVUE;

@@ -12,5 +12,8 @@
     "@types/google-spreadsheet": "^3.3.0",
     "@types/lodash": "^4.14.191",
     "@types/moment": "^2.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.4"
   }
 }
